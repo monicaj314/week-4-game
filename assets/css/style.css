@@ -3,6 +3,10 @@ img {
 	height: 50px;
 	cursor: pointer;
 }
+
+#message {
+	min-height:1.5em;
+}
 .crystal {
 	display:inline-block;
 }

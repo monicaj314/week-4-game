@@ -13,6 +13,7 @@ var crystalGame = {
     this.guessNumber = 0;
     this.updateScore();
     this.gameOver = false;
+    $('#button-holder').empty();
   },
 
   	updateScore: function() {
@@ -24,8 +25,10 @@ var crystalGame = {
 
   	stopGame: function() {
   	 if (this.gameOver == true) {
-  	 var resetButton = $('<button>Restart</button>');
+  	 var resetButton = $('<button>Play Again</button>');
   	 $('#button-holder').html(resetButton);
+  	 } else {
+  	 	crystalGame.newGame();
   	 }
   	}
 	
@@ -56,13 +59,13 @@ for (var i = 0; i < crystal.length; i++ ) {
 
   	if (crystalGame.guessNumber === crystalGame.rightAnswer) {
   		crystalGame.wins++;
-  		crystalGame.message = "YOU WIN! :D Click anywhere to play again.";
+  		crystalGame.message = 'OMG YOU DID IT! :D Click "Play Again" to reset.';
       	crystalGame.updateScore();
   		crystalGame.gameOver=true; 
   		crystalGame.stopGame();
   	} else if (crystalGame.guessNumber > crystalGame.rightAnswer) {
   		crystalGame.losses++;
-  		crystalGame.message = "YOU LOSE! D: Click anywhere to play again.";
+  		crystalGame.message = 'Uh oh! Your number went over D: Click "Play Again" to reset.';
       	crystalGame.updateScore();
   		crystalGame.gameOver=true;
   		crystalGame.stopGame();
@@ -72,11 +75,10 @@ for (var i = 0; i < crystal.length; i++ ) {
 
 	
 	$(document).on("click", 'button', function() {
-	console.log("test");
 	if (crystalGame.gameOver)  {
-
 		crystalGame.newGame();
-
+	} else {
+		crystalGame.stopGame();
 		}
 
     })
