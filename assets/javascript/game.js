@@ -5,19 +5,29 @@ var crystalGame = {
 	guessNumber: 0,
 	gameOver: false,
   	message: "",
+
 	newGame: function(){
     this.rightAnswer = Math.floor(Math.random() * (120 - 19) + 1) + 19;
     $("#answer").text(this.rightAnswer);
+    this.message = "";
     this.guessNumber = 0;
     this.updateScore();
     this.gameOver = false;
   },
-  updateScore: function() {
+
+  	updateScore: function() {
     $("#message").text(this.message);
     $("#guess").text("Your Number: " + this.guessNumber);
     $("#wins").text("Wins: " + this.wins);
     $("#losses").text("Losses: " + this.losses);
-  }
+  },
+
+  	stopGame: function() {
+  	 if (this.gameOver == true) {
+  	 var resetButton = $('<button>Restart</button>');
+  	 $('#button-holder').html(resetButton);
+  	 }
+  	}
 	
 }
 crystalGame.newGame();
@@ -31,6 +41,7 @@ for (var i = 0; i < crystal.length; i++ ) {
 
 //apply click function to all crystal divs
   $('#'+ crystal[i].name).click(function(){
+  	if(crystalGame.gameOver) return
   	var crystalColor = $(this).attr('id');
   	var crystalObject = crystal.find(function(color) {
   		if (color.name == crystalColor) {
@@ -41,22 +52,31 @@ for (var i = 0; i < crystal.length; i++ ) {
   	$('#guess').html("Your Number: " + crystalGame.guessNumber);
 
 
+
+
   	if (crystalGame.guessNumber === crystalGame.rightAnswer) {
   		crystalGame.wins++;
   		crystalGame.message = "YOU WIN! :D Click anywhere to play again.";
-      crystalGame.updateScore();
-  		crystalGame.gameOver=true;
+      	crystalGame.updateScore();
+  		crystalGame.gameOver=true; 
+  		crystalGame.stopGame();
   	} else if (crystalGame.guessNumber > crystalGame.rightAnswer) {
   		crystalGame.losses++;
   		crystalGame.message = "YOU LOSE! D: Click anywhere to play again.";
       	crystalGame.updateScore();
   		crystalGame.gameOver=true;
+  		crystalGame.stopGame();
   	}
   })
 }
+
 	
-$('button').click(function() {
+	$(document).on("click", 'button', function() {
+	console.log("test");
 	if (crystalGame.gameOver)  {
+
 		crystalGame.newGame();
+
 		}
+
     })
