@@ -1,24 +1,74 @@
 body {
-	background-image: url('../../assets/images/crystalbackground.jpg')
+	font-family: 'Sansita', sans-serif;
+	color: white;
+	font-size: 15pt;
+	background-image: url('../../assets/images/blkcrystal.jpg')
 }
 img {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	cursor: pointer;
+}
+li {
+	line-height: 1.5;
+}
+button {
+	margin-top: 25px;
+}
+#game-title {
+text-align: center;
+}
+#game-content {
+	width:60%;
+	margin:auto;
+	font-size: 1.5em;
+	text-align: center;
 }
 
 #message {
-	min-height:;
-}
-#game-title {
+	min-height: 1.5em;
 
 }
+
 #instructions {
-
+width: 60%;
+margin:auto;
+background-color: black;
 }
 #wins, #losses {
 	display:inline-block;
+	text-align:center;
+}
+#losses {
+}
+#crystal-buttons {
+	width:60%;
+	margin:auto;
+}
+#button-holder {
+	margin-left: 15px;
+}
+.welcome {
+	font-size: 1.5em;
+}
+.sparkle {
+	background-image: url(http://i361.photobucket.com/albums/oo54/crackysparkles/sparkles/sparkle.gif);
 }
 .crystal {
 	display:inline-block;
+}
+.line-spacing {
+	line-height: 1.5;
+}
+.win {
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #006600;
+}
+.loss {
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 10px;
+	background-color: #99003d;
 }

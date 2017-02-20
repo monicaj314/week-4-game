@@ -3,61 +3,66 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 </head>
 <body>
-<h1 id="game-title">Crystal Game</h1>
+<h1 id="game-title"><span class="sparkle">Crystal Game</span></h1>
 <div id="instructions">
 	<p>
-		Welcome to the Crystal Game!
+		<span class="line-spacing welcome">Welcome to the Crystal Game! <br></span>
 
-		Rules are simple: 
+		Here are the rules: 
 		<ul>
-			<li>You will be given a random number at the start of the game. This is your <b>Goal Number</b>.</li>
-			<li>There are four crystals at the bottom that have a hidden numeric value.</li>
+			<li>You will be given a <b>Goal Number</b> at the start of the game.</li>
+			<li>The four crystals at the bottom  have a hidden numeric value.</li>
 			<li>Click on a crystal to add its value to <b>Your Number</b>.</li>
 			<li>Win the game by matching Your Number to the Goal Number without going over.</li>
-			<li>If Your Number goes over the Goal Number, the game is over and you click "<b>Play Again</b>" to reset.</li>
+			<li>If Your Number goes over the Goal Number, the game is over.</li>
 			<li>Each time the game is reset, you will get a new Goal Number and the crystals will have new hidden values. Good luck!</li>
 		</ul>
 	</p>
 </div>
-<div id="wins-losses">
-	
-	<div id="wins">
-		Wins: 0
+<div id="game-content">
+	<div id="wins-losses">
+		
+		<div id="wins" class="win">
+			Wins: 0
+		</div>
+		<div id="losses" class="loss">
+			Losses: 0
+		</div>
 	</div>
-	<div id="losses">
-		Losses: 0
+	<div id="answer"></div> 
+	<div id="guess">
+		Your Number: 
 	</div>
 	<div id="message">
-		
+			
 	</div>
 </div>
-<div id="answer"></div> 
-<div id="guess">
-	Your Number: 
+	<!-- buttons? -->
+<div id= "crystal-buttons">
+	<div class="row">
+		<div id="blue" class="crystal col-lg-3">
+			<img src="assets/images/blue.jpg">
+		</div>
+		<div id="clear" class="crystal col-lg-3">
+			<img src="assets/images/clear.jpg">
+		</div>
+		<div id="red" class="crystal col-lg-3">
+			<img src="assets/images/red.jpg">
+		</div>
+		<div id="rainbow" class="crystal col-lg-3">
+			<img src="assets/images/rainbow.jpg">
+		</div>
+		<div id="button-holder"></div>
+	</div>
 </div>
-
-
-
-<!-- buttons? -->
-<div id="blue" class="crystal">
-	<img src="assets/images/blue.jpg">
-</div>
-<div id="clear" class="crystal">
-	<img src="assets/images/clear.jpg">
-</div>
-<div id="red" class="crystal">
-	<img src="assets/images/red.jpg">
-</div>
-<div id="rainbow" class="crystal">
-	<img src="assets/images/rainbow.jpg">
-</div>
-<div id="button-holder"></div>
-
-
+		
 <script type= "text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ var crystalGame = {
 
   	stopGame: function() {
   	 if (this.gameOver == true) {
-  	 var resetButton = $('<button>Play Again</button>');
+  	 var resetButton = $('<button type="button" class="btn btn-default">Play Again</button>');
   	 $('#button-holder').html(resetButton);
   	 } else { 
   	 	crystalGame.newGame();
@@ -61,7 +61,7 @@ for (var i = 0; i < crystal.length; i++ ) {
   		$('#guess').html("Your Number: " + crystalGame.guessNumber);
 		if (crystalGame.guessNumber === crystalGame.rightAnswer) {
 	  		crystalGame.wins++;
-	  		crystalGame.message = 'OMG YOU DID IT! :D Click "Play Again" to reset.';
+	  		crystalGame.message = 'YAY YOU DID IT!    :D    Click "Play Again" to reset.';
 	      	crystalGame.updateScore();
 	  		crystalGame.gameOver=true; 
 	  		crystalGame.stopGame();
