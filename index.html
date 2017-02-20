@@ -7,11 +7,21 @@
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 </head>
 <body>
-<div id="game-title">Crystal Game</div>
-<div id="instructions"></div>
-<div id="answer"></div>
-<div id="guess">
-	Your Number: 
+<h1 id="game-title">Crystal Game</h1>
+<div id="instructions">
+	<p>
+		Welcome to the Crystal Game!
+
+		Rules are simple: 
+		<ul>
+			<li>You will be given a random number at the start of the game. This is your <b>Goal Number</b>.</li>
+			<li>There are four crystals at the bottom that have a hidden numeric value.</li>
+			<li>Click on a crystal to add its value to <b>Your Number</b>.</li>
+			<li>Win the game by matching Your Number to the Goal Number without going over.</li>
+			<li>If Your Number goes over the Goal Number, the game is over and you click "<b>Play Again</b>" to reset.</li>
+			<li>Each time the game is reset, you will get a new Goal Number and the crystals will have new hidden values. Good luck!</li>
+		</ul>
+	</p>
 </div>
 <div id="wins-losses">
 	
@@ -25,6 +35,12 @@
 		
 	</div>
 </div>
+<div id="answer"></div> 
+<div id="guess">
+	Your Number: 
+</div>
+
+
 
 <!-- buttons? -->
 <div id="blue" class="crystal">
