@@ -1,6 +1,4 @@
-# week-4-game
-
-Click [here](https://monicaj314.github.io/week-4-game/) to start the Crystal Game
+# Crystal Game
 
 Overview:
 
@@ -9,3 +7,5 @@ Overview:
 - Click on a crystal to add its value to Your Number.
 - Win the game by matching Your Number to the Goal Number without going over.
 - If Your Number goes over the Goal Number, the game is over.
+
+Click [here](https://monicaj314.github.io/week-4-game/) to start the Crystal Game
