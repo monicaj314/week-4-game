@@ -1,6 +1,6 @@
 # Crystal Game
 
-Overview:
+#### Overview:
 
 - You will be given a Goal Number at the start of the game.
 - The four crystals at the bottom have a hidden numeric value.
